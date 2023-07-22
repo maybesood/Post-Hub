@@ -1,0 +1,19 @@
+<!-- search-results.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Results</title>
+</head>
+<body>
+  <h1>Search Results</h1>
+  <% if (posts.length === 0) { %>
+    <p>No results found.</p>
+  <% } else { %>
+    <ul>
+      <% posts.forEach(post => { %>
+        <li><%= post.title %></li>
+      <% }); %>
+    </ul>
+  <% } %>
+</body>
+</html>

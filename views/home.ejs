@@ -1,0 +1,63 @@
+<%- include("header") -%>
+<nav>
+  <ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/compose">Compose</a></li>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/dashboard">Profile</a></li>
+    <li><a href="/logout">Logout</a></li>
+    
+  </ul>
+</nav>
+<header>
+  <h1>POST HUB</h1>
+  <p>by Himaansh</p>
+</header>
+
+<ul class="post-list">
+  <% posts.forEach(function (post) { %>
+  <li class="post-item">
+    <div class="post-content">
+      <div>
+      <h2><%= post.title %></h2>
+      <p class="date"> <%= moment(post.createdAt).format('MMMM Do YYYY, h:mm:ss a') %></p> <!-- Format the date and time -->
+      <p><%= post.content %></p>
+      <p>Likes: <%= post.like %></p>
+      </div>
+      <div>
+        <a href="/delete/<%= post._id %>">
+        <i class="fas fa-trash-alt"></i>
+        </a>
+      </div>
+    </div>
+    <div class="post-actions">
+     
+      <form action="/like/<%= post._id %>" method="post">
+        <button type="submit">Like</button>
+      </form>
+      <br>
+    </div>
+    <form action="/comment/<%= post._id %>" method="post">
+      <input type="text" placeholder="Add your comment here" name="comment" />
+      <button type="submit">Post</button>
+      
+    </form>
+    <h3>Comments:</h3>
+      <% post.comments.forEach(function (comment) { %>
+        <p class="post-comment"><%= comment %></p>
+        <% }); %>
+
+   
+
+        
+      
+    
+
+      
+    
+  </li>
+  <% }); %>
+</ul>
+
+<%- include("footer") -%>

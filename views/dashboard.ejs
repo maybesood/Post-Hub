@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/dashboardstyles.css">
+</head>
+<body>
+  <h1>Welcome to Your Dashboard, <%= user.name %>!</h1>
+  <div>
+    <img src="<%= user.profilePicture %>" alt="Profile Picture" width="100" height="100">
+    <p><strong>Name:</strong> <%= user.name %></p>
+    <p><strong>Email:</strong> <%= user.email %></p>
+    <p><strong>Bio:</strong> <%= user.bio %></p>
+    <h2>Social Media Links: </h2>
+    <p><strong>Instagram:</strong> <%= user.insta %></p>
+    <p><strong>Facebook:</strong> <%= user.facebook %></p>
+    <p><strong>LinkedIn:</strong> <%= user.linkedIn %></p>
+  </div>
+  <a href="/edit-profile">Edit Profile</a>
+  <a href="/">Home</a>
+</body>
+</html>
+
