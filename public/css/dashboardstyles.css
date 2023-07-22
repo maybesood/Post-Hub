@@ -1,0 +1,66 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  div {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    margin: 30px auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  a:hover {
+    background-color: #0056b3;
+  }
+  
+/* dashboardstyles.css */
+
+body {
+  text-align: center;
+}
+
+.profile-container {
+  margin: 20px auto; /* Center the profile container */
+  max-width: 300px; /* Optional: Adjust the width as needed */
+}
+
+img {
+  display: block; /* Make sure the image is centered */
+  margin: 0 auto; /* Center the image */
+}
+
+.edit-profile-button {
+  margin-top: 20px; /* Add some space between the profile container and the button */
+}
